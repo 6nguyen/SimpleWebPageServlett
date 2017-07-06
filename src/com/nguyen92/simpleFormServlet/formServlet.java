@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import java.net.URLEncoder;
+import java.net.URLDecoder;
+
 /**
  * Servlet implementation class formServlet
  */
@@ -41,6 +44,29 @@ public class formServlet extends HttpServlet {
 		out.println(request.getParameter("firstName") + " " + request.getParameter("lastName"));
 		out.println("<br/><br/>");
 		out.println("<br/>Welcome to The Community!");
+		
+		// read form data
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String fullName = firstName + " " + lastName;
+		String gender = request.getParameter("gender");
+		String seeking = request.getParameter("seeking");
+		String ethnicity = request.getParameter("ethnicity");
+		String favMovie = request.getParameter("favMovie");
+		String favAnimal = request.getParameter("favAnimal");
+		String favHobby = request.getParameter("favHobby");
+		
+		// print out response page
+		out.println("<h1 align=\"center\">My Profile</h1>");
+		out.println("<h2>" + fullName + "</h2>");
+		out.println(gender + " interested in " + seeking);
+		out.println("<hr>");
+		out.println("<h4>Ethnicity</h4>	"
+				+ "<ul> "
+				+ "<li>" + ethnicity 
+				+ "</ul>");
+		
+		
 		out.println("</body></html>");
 	}
 
