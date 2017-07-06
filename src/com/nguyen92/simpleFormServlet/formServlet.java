@@ -35,6 +35,7 @@ public class formServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		// Step 3: generate HTML code
+		
 		out.println("<html><body>");
 		out.println("Successfully logged in as ");
 		out.println(request.getParameter("firstName") + " " + request.getParameter("lastName"));

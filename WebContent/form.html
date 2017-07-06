@@ -1,17 +1,64 @@
 <html>
+<head>
+	<title>My Profile</title>
+</head>
 
 <body>
+	<h1 align="center">My Profile</h1>
 
-<form action="formServlet" method="GET" >
-	First name: <input type="text" name="firstName" />
-	<br/><br/>
+	<form action="forServlet">
 	
-	Last name: <input type="text" name="lastName" />
-	<br/><br/>
-	
-	<input type="submit" value="Log in" />
-</form>
+		First Name: <input type="text" name="firstName" />
+		<br/><br/>
+		Last Name: <input type="text" name="lastName" />
+		
+		
+		<br/><br/><br/>
+		
+		Do you identify as a:
+		<br/>
+		<input type="radio" name="gender" value="Male"> Male &emsp;
+		<input type="radio" name="gender" value="Female"> Female
+			
+		<br/><br/>
+		
+		Are you interested in 
+		<input type="radio" name="seeking" value="Men" /> Men &emsp;
+		<input type="radio" name="seeking" value="Women" /> Women &emsp;
+		<input type="radio" name="seeking" value="Men & Women" /> Both
+		
+		<br/><br/>
+		
+		What is your Ethnicity? &emsp;
+		<select name="ethnicity">
+			<option>East Asian</option>
+			<option>Middle East Asian</option>
+			<option>Latinx</option>
+			<option>Black</option>
+			<option>White</option>
+			<option>Islander</option>
+		</select>
+		
+		<br/><br/>
+		
+		What is your favorite Movie? <input type="text" name="favMovie" />
+		
+		<br/><br/>
+		
+		If you were an Animal, what would you be? <input type="text" name="favAnimal" />
+		
+		<br/><br/>
+		
+		What do you do for Fun? <input type="text" name="favHobby" />
+		
+		<br/><br/>
+		
 
+			
+		&emsp;&emsp;&emsp;&emsp;<input type="submit" value ="Save" />
+		
+	</form>
+	
 </body>
 
 </html>
