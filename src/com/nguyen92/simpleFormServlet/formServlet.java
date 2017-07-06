@@ -36,13 +36,11 @@ public class formServlet extends HttpServlet {
 		
 		// Step 3: generate HTML code
 		out.println("<html><body>");
-		out.println("");
-		out.println("");
-		out.println("");
-		out.println("");
+		out.println("Successfully logged in as ");
+		out.println(request.getParameter("firstName") + " " + request.getParameter("lastName"));
+		out.println("<br/><br/>");
+		out.println("<br/>Welcome to The Community!");
 		out.println("</body></html>");
-		
-		
 	}
 
 	/**
