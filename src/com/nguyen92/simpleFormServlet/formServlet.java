@@ -61,12 +61,25 @@ public class formServlet extends HttpServlet {
 		out.println("<h2>" + fullName + "</h2>");
 		out.println(gender + " interested in " + seeking);
 		out.println("<hr>");
+		
 		out.println("<h4>Ethnicity</h4>	"
 				+ "<ul> "
 				+ "<li>" + ethnicity 
 				+ "</ul>");
+		out.println("<h4>Favorite Movie</h4>	"
+				+ "<ul> "
+				+ "<li>" + favMovie 
+				+ "</ul>");
+		out.println("<h4>Spirit Animal</h4>	"
+				+ "<ul> "
+				+ "<li>" + favAnimal 
+				+ "</ul>");
+		out.println("<h4>Hobbies</h4>	"
+				+ "<ul> "
+				+ "<li>" + favHobby 
+				+ "</ul>");
 		
-		
+		out.println("<a href=\"form.html\">Edit my profile</href>");
 		out.println("</body></html>");
 	}
 
