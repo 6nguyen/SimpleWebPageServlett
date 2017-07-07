@@ -44,9 +44,9 @@ public class TestParamServlet extends HttpServlet {
 		
 		// Step 4:  generate HTML code
 		out.println("<html><body>");
-		out.println("");
-		out.println("");
-		out.println("");
+		out.println("Max name length: " + maxNameLength);
+		out.println("<br/>");
+		out.println("Page Version: " + pageVersion);
 		out.println("</body></html>");
 		
 		
