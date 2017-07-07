@@ -3,6 +3,7 @@ package com.nguyen92.simpleFormServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,7 +36,11 @@ public class TestParamServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		// Step 3:  read configuration parameters
+		// inherit context from HttpServlet
+		ServletContext context = getServletContext();
 		
+		String maxNameLength = context.getInitParameter("maxNameLength");
+		String pageVersion = context.getInitParameter("pageVersion");
 		
 		// Step 4:  generate HTML code
 		out.println("<html><body>");
